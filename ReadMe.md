@@ -135,6 +135,10 @@ disableDefaultConstraintViolation 메소드는
 ConstraintViolation제약 조건에 선언 된 메시지 템플릿을 사용 하는 기본 개체 생성을 비활성화합니다 .
 다른 위반 메시지를 설정하거나 ConstraintViolation 다른 속성을 기반으로 생성하는 데 유용 합니다.
 
+필드 검증인 경우 ConstraintValidatorContext context.addPropertyNode() 필수 메소드입니다.
+어떠한 필드가 부족한지 연결해주는 메소드입니다.
+예를들어 맴버 변수 password 넣으면 (password가 틀렸습니다!) userId 넣으면 (userId가 틀렸습니다.) 처럼 key 설정이라고 보면 됩니다.
+
 ### Reflection API
 
 BeanUtils 를 사용하기 위해서는 `프로퍼티(property) 에 접근할 수 있는 set, get 메소드가 제공`되어야 한다.
